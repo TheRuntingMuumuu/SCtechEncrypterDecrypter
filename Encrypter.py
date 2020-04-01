@@ -19,6 +19,9 @@ accept = input('Do you agree (y/n) : ') #do they agree with the terms???
 encoder = 0
 theyWantToEncodeAnother = True
 
+#--------------------For clearing the screen--------------------------------------#
+def clear()
+    os.system('cls' if os.name == 'nt' else 'clear') #Credit: stackoverflow.com/questions/2084508/clear-terminal-in-python/23075152
 #--------------------Functions for determining how to encrypt/decrypt-------------#
 def encoderFunction(text):
     """This is the function that encodes all the text. It takes the text input from the user and will encode it and return the result"""
