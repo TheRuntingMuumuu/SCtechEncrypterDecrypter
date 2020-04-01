@@ -8,20 +8,21 @@ Made for fun. :)
 [I accidentally wrote endoded and decoded instead of encrypted and decrypted in the vars, and I am too lazy to change it.]
 """
 
+
+#--------------------For clearing the screen--------------------------------------#
+def clear()
+    os.system('cls' if os.name == 'nt' else 'clear') #Credit: stackoverflow.com/questions/2084508/clear-terminal-in-python/23075152
 #----------------------------Imports the necisarry module things-----------------#
 import os
 from sys import exit
 #------------------------------Welcome Area--------------------------------------#
-os.system('cls') #formatting (clears the window)
+clear() #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
 print('\n Please do not distribute this program to anyone without my permission. Thanks, TRM.')
 accept = input('Do you agree (y/n) : ') #do they agree with the terms???
 encoder = 0
 theyWantToEncodeAnother = True
 
-#--------------------For clearing the screen--------------------------------------#
-def clear()
-    os.system('cls' if os.name == 'nt' else 'clear') #Credit: stackoverflow.com/questions/2084508/clear-terminal-in-python/23075152
 #--------------------Functions for determining how to encrypt/decrypt-------------#
 def encoderFunction(text):
     """This is the function that encodes all the text. It takes the text input from the user and will encode it and return the result"""
@@ -93,7 +94,7 @@ def decryptVer1(text):
 #--------------------------------What the user wants to do------------------------#
 if accept == 'y': #if they accept the program will work. Else it will skip over this and go to the else statement at the bottom of the page and will exit. :)
     while theyWantToEncodeAnother == True:
-        os.system('cls')
+        clear()
         print('------------- SCtech Encrypter/Decrypter -------------\n')
         while encoder == 0:
             encoder = input('Do you want to use the encoder or decoder : ')
