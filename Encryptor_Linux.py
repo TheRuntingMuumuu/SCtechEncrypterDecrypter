@@ -1,4 +1,3 @@
-from sys import exit
 """
 SCtech Encrypter
 Coded by TheRuntingMuumuu
@@ -8,9 +7,9 @@ Made for fun. :)
 [I accidentally wrote endoded and decoded instead of encrypted and decrypted in the vars, and I am too lazy to change it.]
 """
 
-#----------------------------Imports the necisarry module things-----------------#
+#----------------------------Imports the necessary module things-----------------#
 import os
-
+from sys import exit
 #------------------------------Welcome Area--------------------------------------#
 os.system('clear') #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
