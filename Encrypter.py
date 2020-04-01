@@ -10,7 +10,7 @@ Made for fun. :)
 
 
 #--------------------For clearing the screen--------------------------------------#
-def clear()
+def clear():
     os.system('cls' if os.name == 'nt' else 'clear') #Credit: stackoverflow.com/questions/2084508/clear-terminal-in-python/23075152
 #----------------------------Imports the necisarry module things-----------------#
 import os
