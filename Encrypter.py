@@ -10,7 +10,7 @@ Made for fun. :)
 
 #----------------------------Imports the necisarry module things-----------------#
 import os
-
+from sys import exit
 #------------------------------Welcome Area--------------------------------------#
 os.system('cls') #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
