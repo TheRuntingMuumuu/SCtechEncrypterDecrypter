@@ -9,7 +9,7 @@ else:
     messagebox.showerror("Error!", "You did not agree!")
     exit()
 
-entry = Entry(root)
+entry = Entry(main)
 def encodeVer1(text):
     """This is one of the ways that the text can be encrypted. It is very simple."""
     encodedText = list(text)
@@ -40,7 +40,8 @@ def encrypt():
     encryptedText = encodeVer1(toEncrypt)
     messagebox.showinfo("The result", encryptedText)
 def decrypt():
-    toEncrypt = entry.get()
-    decryp
+    toDecrypt = entry.get()
+    decryptedText = decryptVer1(toDecrypt)
+    messagebox.showinfo("The result", decryptedText)
 
 main.mainloop()
