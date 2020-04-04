@@ -19,7 +19,7 @@ from sys import exit
 clear() #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
 print('\n Please do not distribute this program to anyone without my permission. Thanks, TRM.')
-accept = input('Do you agree (y/n) : ') #do they agree with the terms???
+accept = input('Do you agree (y/n) : ') #do they agree with the terms?
 encoder = 0
 theyWantToEncodeAnother = True
 
@@ -28,7 +28,7 @@ def encoderFunction(text):
     """This is the function that encodes all the text. It takes the text input from the user and will encode it and return the result"""
     verTF = False
     while verTF == False:
-        ver = input('What version do you want to use to encode : ')
+        ver = input('What version do you want to use to encode? (Available: 1) ')
         if ver == '1':
             encodedText = encodeVer1(text)
             verTF = True
