@@ -50,7 +50,7 @@ def decrypt():
     decryptedText = decryptVer1(toDecrypt)
     Label(main, text="The result: ").pack()
     messagebox.showinfo("The result", decryptedText)
-    w = Text(master, height=1, borderwidth=0)
+    w = Text(main, height=1, borderwidth=0)
     w.insert(1.0, decryptedText)
     w.pack()
     w.configure(state="disabled")
