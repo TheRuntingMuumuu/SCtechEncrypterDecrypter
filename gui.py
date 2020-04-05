@@ -40,10 +40,20 @@ def encrypt():
     toEncrypt = textBox.get()
     encryptedText = encodeVer1(toEncrypt)
     messagebox.showinfo("The result", encryptedText)
+    Label(main, text="The result: ").pack()
+    w = Text(main, height=1, borderwidth=0) #SOURCE: https://stackoverflow.com/questions/1602106/in-pythons-tkinter-how-can-i-make-a-label-such-that-you-can-select-the-text-wi
+    w.insert(1.0, encryptedText)
+    w.pack()
+    w.configure(state="disabled")
 def decrypt():
     toDecrypt = textBox.get()
     decryptedText = decryptVer1(toDecrypt)
+    Label(main, text="The result: ").pack()
     messagebox.showinfo("The result", decryptedText)
+    w = Text(master, height=1, borderwidth=0)
+    w.insert(1.0, decryptedText)
+    w.pack()
+    w.configure(state="disabled")
 
 Button(main, text="Encrypt Text", command=encrypt).pack()
 Button(main, text="Decrypt Text", command=decrypt).pack()
