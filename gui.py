@@ -9,7 +9,8 @@ else:
     messagebox.showerror("Error!", "You did not agree!")
     exit()
 
-entry = Entry(main)
+textBox = Entry(main)
+textBox.pack()
 def encodeVer1(text):
     """This is one of the ways that the text can be encrypted. It is very simple."""
     encodedText = list(text)
@@ -36,12 +37,15 @@ def decryptVer1(text):
     return decodedText
 def encrypt():
     #Until there are multiple versions I will not be asking for which version.
-    toEncrypt = entry.get()
+    toEncrypt = textBox.get()
     encryptedText = encodeVer1(toEncrypt)
     messagebox.showinfo("The result", encryptedText)
 def decrypt():
-    toDecrypt = entry.get()
+    toDecrypt = textBox.get()
     decryptedText = decryptVer1(toDecrypt)
     messagebox.showinfo("The result", decryptedText)
+
+Button(main, text="Encrypt Text", command=encrypt).pack()
+Button(main, text="Decrypt Text", command=decrypt).pack()
 
 main.mainloop()
