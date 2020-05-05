@@ -27,7 +27,7 @@ theyWantToEncodeAnother = True
 def encoderFunction(text):
     """This is the function that encodes all the text. It takes the text input from the user and will encode it and return the result"""
     verTF = False
-    while verTF == False:
+    while verTF is False:
         ver = input('What version do you want to use to encode? (Available: 1) ')
         if ver == '1':
             encodedText = encodeVer1(text)
@@ -40,14 +40,13 @@ def encoderFunction(text):
 def decoderFunction(text):
     """This is the function that decodes all the text. It takes the text input from the user and will decode it and return the result"""
     verTF = False
-    while verTF == False:
+    while verTF is False:
         ver = input('What version do you want to use to decrypt : ')
         if ver == '1':
             decodedText = decryptVer1(text)
             verTF = True
         else:
             print('Please enter a valid entry.')
-            verTF = False
     return decodedText
 
 def theyWantToEncodeAnother__Prompt():
@@ -58,8 +57,7 @@ def theyWantToEncodeAnother__Prompt():
         if prompt == 'y':
             return True
         elif prompt == 'n':
-            print('\tThank you for using my encryption/decryption program.')
-            return False
+            exit('\tThank you for using my encryption/decryption program.')
         else:
             validentry = 0
             print('Please enter a valid entry.')
@@ -93,7 +91,7 @@ def decryptVer1(text):
 
 #--------------------------------What the user wants to do------------------------#
 if accept == 'y': #if they accept the program will work. Else it will skip over this and go to the else statement at the bottom of the page and will exit. :)
-    while theyWantToEncodeAnother == True:
+    while theyWantToEncodeAnother is True:
         clear()
         print('------------- SCtech Encrypter/Decrypter -------------\n')
         while encoder == 0:
@@ -107,7 +105,7 @@ if accept == 'y': #if they accept the program will work. Else it will skip over 
             else:
                 encoder = 0
                 print('Please enter a valid entry.')
-        if encoder == True:
+        if encoder is True:
             textToEncode = input('What do you want to encode : ')
             print('\t', encoderFunction(textToEncode))
             theyWantToEncodeAnother = theyWantToEncodeAnother__Prompt()
