@@ -59,11 +59,11 @@ def decrypt():
     global number
     number = number + 1
     window1 = Toplevel() #Source: daniweb.com/programming/software-development/code/442746/toplevel-child-window-example-tkinter-python
-    window1.title('Result #', number)
-    textt = "Result number ", number, ":"
+    window1.title(('Result #', number))
+    textt = ("Result number ", number, ":")
     Label(window1, text=textt).pack()
     messagebox.showinfo("The result", decryptedText)
-    w = Text(main, height=1, borderwidth=0)
+    w = Text(window1, height=1, borderwidth=0)
     w.insert(1.0, decryptedText)
     w.pack()
     w.configure(state="disabled")
