@@ -15,6 +15,10 @@ def clear():
 #----------------------------Imports the necisarry module things-----------------#
 import os
 from sys import exit
+try:
+    from needthis import *
+except ImportError:
+    exit("We couldn't find the file needthis.py. So we have to exit.")
 #------------------------------Welcome Area--------------------------------------#
 clear() #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
@@ -63,31 +67,6 @@ def theyWantToEncodeAnother__Prompt():
             print('Please enter a valid entry.')
 
 #-------------------------------Versions of encrypter and decrypter--------------#
-def encodeVer1(text):
-    """This is one of the ways that the text can be encrypted. It is very simple."""
-    encodedText = list(text)
-    length = len(encodedText)
-    for i in range(0,length):
-        encodedText[i] = ord(encodedText[i])
-    for i in range(0,length):
-        if encodedText[i] != 32:
-            encodedText[i] = encodedText[i] - 8
-    for i in range(0,length):
-        encodedText[i] = str(chr(encodedText[i]))
-    encodedText = ''.join(encodedText)
-    return encodedText
-
-def decryptVer1(text):
-    """this is one of the ways that text can be decrypted."""
-    decodedText = list(text)
-    length = len(decodedText)
-    for i in range(0,length):
-        decodedText[i] = ord(decodedText[i])
-        if decodedText[i] != 32:
-            decodedText[i] = decodedText[i] + 8
-        decodedText[i] = str(chr(decodedText[i]))
-    decodedText = ''.join(decodedText)
-    return decodedText
 
 #--------------------------------What the user wants to do------------------------#
 if accept == 'y': #if they accept the program will work. Else it will skip over this and go to the else statement at the bottom of the page and will exit. :)
