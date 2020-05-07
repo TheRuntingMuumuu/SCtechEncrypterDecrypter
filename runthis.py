@@ -11,5 +11,7 @@ try:
         print("You did not type gui or cli")
 except (KeyboardInterrupt, EOFError):
     exit("You exited the program.")
+except ValueError:
+    exit("FATAL: You typed an invalid entry.")
 except:
     exit("An unknown error occured.")
