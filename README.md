@@ -1,4 +1,4 @@
-# SCtech encryptor
+# SCtech encryptor [![CodeFactor](https://www.codefactor.io/repository/github/theruntingmuumuu/sctechencrypterdecrypter/badge?s=a131bfc0c7a117715f14cb1915811f5f7a1a5cdc)](https://www.codefactor.io/repository/github/theruntingmuumuu/sctechencrypterdecrypter)
 Sugarcane Tech encrypter and decrypter program
 
 # What is it?
