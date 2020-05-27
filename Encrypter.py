@@ -9,9 +9,11 @@ Made for fun. :)
 """
 
 
-#--------------------For clearing the screen--------------------------------------#
+#--------------------For clearing the screen, taken from Palc >:)-----------------#
 def clear():
-    os.system('cls' if os.name == 'nt' else 'clear') #Credit: stackoverflow.com/questions/2084508/clear-terminal-in-python/23075152
+    print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
+       print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
 #----------------------------Imports the necisarry module things-----------------#
 import os
 from sys import exit
