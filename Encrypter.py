@@ -12,15 +12,16 @@ Made for fun. :)
 #--------------------For clearing the screen, taken from Palc >:)-----------------#
 def clear():
     print(chr(27)+'[2j') #First attempt at clearing the screen with ANSI escape codes.
-       print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
-print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
+    print('\033c') #Second attempt at clearing the screen with ANSI escape codes.
+    print('\x1bc') #Third attempt at clearing the screen with ANSI escape codes.
 #----------------------------Imports the necisarry module things-----------------#
 import os
 from sys import exit
 try:
     from needthis import *
 except ImportError:
-    exit("We couldn't find the file needthis.py. So we have to exit.")
+    print("We couldn't find the file needthis.py. So we have to exit.")
+    exit(1)
 #------------------------------Welcome Area--------------------------------------#
 clear() #formatting (clears the window)
 print('------------- SCtech Encrypter/Decrypter -------------\n') #formatting
