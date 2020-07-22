@@ -1,5 +1,8 @@
 def encodeVer1(text): #for Encryption
-    """This is one of the ways that the text can be encrypted. It is very simple."""
+    """
+    This is one of the ways that the text can be encrypted. It is very simple.
+    Syntax: encodeVer1(text)
+    """
     encodedText = list(text)
     length = len(encodedText)
     for i in range(0,length):
@@ -12,7 +15,10 @@ def encodeVer1(text): #for Encryption
     encodedText = ''.join(encodedText)
     return encodedText
 def decryptVer1(text): #for Decryption
-    """this is one of the ways that text can be decrypted."""
+    """
+    This is one of the ways text can be decrypted.
+    Syntax: decryptVer1(encrypted_text)
+    """
     decodedText = list(text)
     length = len(decodedText)
     for i in range(0,length):
