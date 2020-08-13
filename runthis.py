@@ -13,5 +13,5 @@ except (KeyboardInterrupt, EOFError):
     exit("You exited the program.")
 except ValueError:
     exit("FATAL: You typed an invalid entry.")
-except:
-    exit("An unknown error occured.")
+except Exception as ename:
+    exit("An unknown error occured. (%s)"%ename)
