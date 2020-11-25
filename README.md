@@ -11,4 +11,4 @@ No, not yet, and currently it may have a few bugs that we must fix.
 To run the script, type in your command prompt `python3 runthis.py`. You could just type in `python3 Encrypter.py` but there would be very unfriendly errors instead of easy-to-read errors.  
 
 # Future projections
-See the [Projects](https://github.com/Theruntingmuumuu/SCtechEncrypterDecrypter/Projects) tab.
+See the [Projects](https://github.com/Theruntingmuumuu/SCtechEncrypterDecrypter/projects) tab.
