@@ -11,7 +11,7 @@ def encodeVer1(text, encryptionKey=8): #for Encryption
         encodedText[i] = ord(encodedText[i])
     for i in range(0,length):
         if encodedText[i] != 32:
-            encodedText[i] = encodedText[i] - int(encryptionKey)[0]
+            encodedText[i] = encodedText[i] - str(encryptionKey)[0]
     for i in range(0,length):
         encodedText[i] = str(chr(encodedText[i]))
     encodedText = ''.join(encodedText)
@@ -28,7 +28,7 @@ def decryptVer1(text, encryptionKey=8): #for Decryption
     for i in range(0,length):
         decodedText[i] = ord(decodedText[i])
         if decodedText[i] != 32:
-            decodedText[i] = decodedText[i] + int(encryptionKey)[0]
+            decodedText[i] = decodedText[i] + str(encryptionKey)[0]
         decodedText[i] = str(chr(decodedText[i]))
     decodedText = ''.join(decodedText)
     return decodedText
