@@ -9,7 +9,7 @@ def encodeVer1(text, encryptionKey=8): #for Encryption
     for i in range(0,length):
         encodedText[i] = ord(encodedText[i])
     for i in range(0,length):
-        if encodedText[i] != 32
+        if encodedText[i] != 32:
             encodedText[i] = encodedText[i] - int(encryptionKey)[0]
     for i in range(0,length):
         encodedText[i] = str(chr(encodedText[i]))
