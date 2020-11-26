@@ -37,7 +37,7 @@ def encoderFunction(text):
     keyTF = False
     while verTF is False or keyTF is False:
         ver = input('What version do you want to use to encode? (Available: 1) ')
-        key = int(input('What is the encryption key that you want to use? It must be any of the following values: 1, 2, 3, 4, 5, 6, 7, 8Type: '))
+        key = int(input('What is the encryption key that you want to use? It must be any of the following values: 1, 2, 3, 4, 5, 6, 7, 8\nType: '))
         if ver == '1':
             verTF = True
         else:
