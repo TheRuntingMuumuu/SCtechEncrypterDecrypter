@@ -44,7 +44,7 @@ def encoderFunction(text):
             print('You did not enter a valid entry.')
         if key in [1, 2, 3, 4, 5, 6, 7, 8]:
             keyTF = True
-            encodedText = encodeVer1(text, encryptionkey=key)
+            encodedText = encodeVer1(text, encryptionKey=key)
         else: 
             print('You did not enter a valid entry.')
     return encodedText
@@ -62,7 +62,7 @@ def decoderFunction(text):
             print('Please enter a valid entry.')
         if key in [1, 2, 3, 4, 5, 6, 7, 8]:
             keyTF = True
-            decodedText = decryptVer1(text, encryptionkey=key)
+            decodedText = decryptVer1(text, encryptionKey=key)
         else: 
             print('Please enter a valid entry.')
     return decodedText
