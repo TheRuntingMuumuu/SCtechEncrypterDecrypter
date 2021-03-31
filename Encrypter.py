@@ -34,32 +34,43 @@ theyWantToEncodeAnother = True
 def encoderFunction(text):
     """This is the function that encodes all the text. It takes the text input from the user and will encode it and return the result"""
     verTF = False
-    while verTF is False:
+    keyTF = False
+    while verTF is False or keyTF is False:
         ver = input('What version do you want to use to encode? (Available: 1) ')
+        key = int(input('What is the encryption key that you want to use? It must be any of the following values: 1, 2, 3, 4, 5, 6, 7, 8\nType: '))
         if ver == '1':
-            encodedText = encodeVer1(text)
             verTF = True
         else:
             print('You did not enter a valid entry.')
-            verTF = False
+        if key in [1, 2, 3, 4, 5, 6, 7, 8]:
+            keyTF = True
+            encodedText = encodeVer1(text, encryptionKey=key)
+        else: 
+            print('You did not enter a valid entry.')
     return encodedText
 
 def decoderFunction(text):
     """This is the function that decodes all the text. It takes the text input from the user and will decode it and return the result"""
     verTF = False
-    while verTF is False:
-        ver = input('What version do you want to use to decrypt : ')
+    keyTF = False
+    while verTF is False or keyTF is False:
+        ver = input('What version do you want to use to decrypt? (Available: 1) ')
+        key = int(input('What is the encryption key that was used? It must be any of the following values: 1, 2, 3, 4, 5, 6, 7, 8\nIf in doubt, type 8\nType: '))
         if ver == '1':
-            decodedText = decryptVer1(text)
             verTF = True
         else:
+            print('Please enter a valid entry.')
+        if key in [1, 2, 3, 4, 5, 6, 7, 8]:
+            keyTF = True
+            decodedText = decryptVer1(text, encryptionKey=key)
+        else: 
             print('Please enter a valid entry.')
     return decodedText
 
 def theyWantToEncodeAnother__Prompt():
     """This one just asks the user if they want to do it again"""
-    validentry = 0
-    while validentry == 0:
+    validentry = False
+    while validentry is False:
         prompt = input('\nDo you want to encrypt or decrypt another (y/n) : ')
         if prompt == 'y':
             return True
@@ -70,7 +81,7 @@ def theyWantToEncodeAnother__Prompt():
             print('Please enter a valid entry.')
 
 #-------------------------------Versions of encrypter and decrypter--------------#
-
+# NOW PROVIDED IN needthis.py
 #--------------------------------What the user wants to do------------------------#
 if accept == 'y': #if they accept the program will work. Else it will skip over this and go to the else statement at the bottom of the page and will exit. :)
     while theyWantToEncodeAnother is True:
@@ -88,15 +99,15 @@ if accept == 'y': #if they accept the program will work. Else it will skip over 
                 encoder = 0
                 print('Please enter a valid entry.')
         if encoder is True:
-            textToEncode = input('What do you want to encode : ')
+            textToEncode = input('What do you want to encode? ')
             print('\t', encoderFunction(textToEncode))
             theyWantToEncodeAnother = theyWantToEncodeAnother__Prompt()
             encoder = 0
         else:
-            textToDecode = input('What do you want to decode : ')
+            textToDecode = input('What do you want to decode? ')
             print('\t', decoderFunction(textToDecode))
             theyWantToEncodeAnother = theyWantToEncodeAnother__Prompt()
             encoder = 0
 else:
     print('Since you did not agree, you cannot use the program')
-    exit()
+    exit(255)

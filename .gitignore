@@ -1,6 +1,11 @@
 .DS_Store
-Thumbs.db
+[Tt]humbs.db
 *.pyc
 *.pyo
 __pycache__/
 *.pyw
+*.bak
+*.tmp
+*.temp
+tmp/
+*.log
