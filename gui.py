@@ -1,4 +1,4 @@
-from tkinter import * #import the submodules of tkinter
+from tkinter import * #import the stuff of tkinter
 from tkinter import messagebox #import messagebox
 from sys import exit #import the exiting function
 try:
